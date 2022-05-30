@@ -22,30 +22,48 @@ function game() {
             continue
         }
     }
-    console.log(`Your points: ${userPoints} Computer points: ${computerPoints}`);
+    let endGameMessage = gameWinner(userPoints, computerPoints);
+
+    console.log(
+        `Your points: ${userPoints} 
+        Computer points: ${computerPoints} 
+        ${endGameMessage}`);
+}
+
+function gameWinner(user, computer) {
+    const winGameMessage = `YOU WON THE GAME!`;
+    const loseGameMessage = `YOU LOST THE GAME!`;
+    const tieGameMessage = `IT'S A TIE!`;
+    if (user > computer) {
+        return winGameMessage;
+    } else if (user < computer) {
+        return loseGameMessage;
+    } else {
+        return tieGameMessage;
+    }
 }
 
 
 function playRound(playerSelection, computerSelection) {
 
-    const winMessage = `You win! ${playerSelection} beats ${computerSelection}.`;
-    const loseMessage = `You Lose! ${computerSelection} beats ${playerSelection}.`;
-    const tieMessage = `It's a tie! Both chose ${playerSelection}.`
+    const winRoundMessage = `You win! ${playerSelection} beats ${computerSelection}.`;
+    const loseRoundMessage = `You Lose! ${computerSelection} beats ${playerSelection}.`;
+    const tieRoundMessage = `It's a tie! Both chose ${playerSelection}.`
 
     if (playerSelection == 'rock' && computerSelection == 'scissors') {
-        console.log(winMessage);
+        console.log(winRoundMessage);
         return 1;
     } else if (playerSelection == 'scissors' && computerSelection == 'paper') {
-        console.log(winMessage);
+        console.log(winRoundMessage);
         return 1;
     } else if (playerSelection == 'paper' && computerSelection == 'rock') {
-        console.log(winMessage);
+        console.log(winRoundMessage);
         return 1;
     } else if (playerSelection == computerSelection) {
-        console.log(tieMessage);
+        console.log(tieRoundMessage);
         return 2;
     } else {
-        console.log(loseMessage);
+        console.log(loseRoundMessage);
         return 3
     }
 }
