@@ -1,8 +1,6 @@
+/* Main Game Section */
 function game() {
-    /* Weapon list*/
     let weaponOfChoice = ["rock", "paper", "scissors"];
-
-    /* Points */
     let userPoints = 0;
     let computerPoints = 0;
 
@@ -11,7 +9,6 @@ function game() {
         let playerSelection = prompt("Rock, Paper Or Scissors?").toLowerCase();
         /* Let Computer "choose" weapon */
         let computerSelection = computerPlay(weaponOfChoice);
-
         let roundScore = playRound(playerSelection, computerSelection);
 
         if (roundScore == 1) {
@@ -30,6 +27,7 @@ function game() {
         ${endGameMessage}`);
 }
 
+/* Game Winner Function */
 function gameWinner(user, computer) {
     const winGameMessage = `YOU WON THE GAME!`;
     const loseGameMessage = `YOU LOST THE GAME!`;
@@ -43,7 +41,7 @@ function gameWinner(user, computer) {
     }
 }
 
-
+/* Game Round Function */
 function playRound(playerSelection, computerSelection) {
 
     const winRoundMessage = `You win! ${playerSelection} beats ${computerSelection}.`;
@@ -68,6 +66,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+/* Computer choice function */
 function computerPlay(computerSelection) {
     return computerSelection[Math.floor(Math.random() * computerSelection.length)]
 }
