@@ -1,0 +1,4 @@
+Get input from user ("Rock, Paper or Scissors?")
+Store input in variable
+Compare user input with what computer had
+Print out how the game went and if user won or lost.
