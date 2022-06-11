@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+body {
+  font-family: 'Patrick Hand', cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  width: 30vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button-container button {
+  min-width: 0;
+  height: 5em;
+  width: 10em;
+  background: green;
+  color: white;
+  border: 1px solid white;
+}
+
+.runningScore {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.runningScore .left-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.runningScore .left-box .playerScore {
+  font-size: 3em;
+}
+
+.runningScore .right-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.runningScore .right-box .computerScore {
+  font-size: 3em;
+}
+
+.roundResult {
+  margin-top: 2em;
+}
+
+.totalScore {
+  margin-top: 2em;
+  font-size: 40px;
+}
+
+.playAgain {
+  display: none;
+  min-width: 0;
+  height: 5em;
+  width: 10em;
+  background: green;
+  color: white;
+  border: 1px solid white;
+}

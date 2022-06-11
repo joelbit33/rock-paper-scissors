@@ -1,17 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
 
+<body>
+    <header>
+        <h1>Rock, Paper, Scissors</h1>
+    </header>
+    <div class="button-container">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+
+    <div class="runningScore">
+        <div class="left-box">
+            <h2>Player Score</h2>
+            <div class="playerScore">0</div>
+        </div>
+
+        <div class="right-box">
+            <h2>Computer Score</h2>
+            <div class="computerScore">0</div>
+        </div>
+    </div>
+    <div class="roundResult"></div>
+
+    <div class="totalScore"></div>
+
+    <button class="playAgain">Play again</button>
 
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
